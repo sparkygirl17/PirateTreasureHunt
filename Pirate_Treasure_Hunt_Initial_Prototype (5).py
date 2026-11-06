@@ -210,7 +210,7 @@ st.subheader("Test out different search algorithms to see for yourself which is 
 st.write("Each search algorithm has different strengths and weaknesses. Watch how the pirate naviagtes the terrain to compare and contrast and see for yourself!")
 user_name = st.text_input("Enter Player Name:")
 if user_name:
-    st.success(f'Welcome to Pirate Treasure Hunt, {user_name}! Let's Explore Search Algorithms.')
+    st.success(f'Welcome to Pirate Treasure Hunt, {user_name}! Let\'s Explore Search Algorithms.')
 
 st.pyplot(plt.gcf())
 
