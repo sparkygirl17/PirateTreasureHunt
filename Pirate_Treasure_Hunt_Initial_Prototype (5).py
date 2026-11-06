@@ -18,6 +18,14 @@ from itertools import count
 from time import perf_counter
 import matplotlib.pyplot as plt
 
+#Blocking out new maps
+# if grid_choice == 'Map1':
+# GRID = [ ]
+# elif grid_choice == 'Map2':
+# GRID = [ ]
+# else:
+# GRID = [ ]
+
 GRID = [
     "S..C#.....",
     ".#..#.....",
@@ -212,7 +220,13 @@ user_name = st.text_input("Enter Player Name:")
 if user_name:
     st.success(f'Welcome to Pirate Treasure Hunt, {user_name}! Let\'s Explore Search Algorithms.')
 
+grid_choice = st.selectbox('Choose a map below:', ['Map1', 'Map2', 'Map3']) 
+
 st.pyplot(plt.gcf())
+
+st.text(f'{"Algorithm":<12}{"Steps":>8}{"Expanded":>12}{"Time (ms)":>14}')
+for name,stats in baseline.items():
+    st.text(f'{name:<12}{len(stats["path"])-1:>8}{stats["expanded"]:>12}{stats["seconds"]*1000:>14.3f}')
 
 
 # ## Suggested next steps for team discussion
