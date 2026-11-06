@@ -203,7 +203,8 @@ assert all(heuristic(a,b)==1 for a,b in zip(result['visited'],result['visited'][
 assert len(baseline['BFS']['path'])==len(baseline['UCS']['path'])==len(baseline['A*']['path'])
 print('Sanity checks passed.')
 
-
+import streamlit as st
+st.pyplot(plt.gcf())
 # ## Suggested next steps for team discussion
 # 1. Confirm the intended game rule: must the pirate collect a coin and map before the treasure, or are they optional pickups?
 # 2. Decide whether to keep uniform movement costs or add terrain penalties. If terrain costs vary, UCS/A* comparison becomes more informative.
