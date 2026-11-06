@@ -204,7 +204,17 @@ assert len(baseline['BFS']['path'])==len(baseline['UCS']['path'])==len(baseline[
 print('Sanity checks passed.')
 
 import streamlit as st
+
+st.header("Pirate Treasure Hunt Dashboard")
+st.subheader("Test out different search algorithms to see for yourself which is the best.")
+st.write("Each search algorithm has different strengths and weaknesses. Watch how the pirate naviagtes the terrain to compare and contrast and see for yourself!")
+user_name = st.text_input("Enter Player Name:")
+if user_name:
+    st.success(f'Welcome to Pirate Treasure Hunt, {user_name}! Let's Explore Search Algorithms.')
+
 st.pyplot(plt.gcf())
+
+
 # ## Suggested next steps for team discussion
 # 1. Confirm the intended game rule: must the pirate collect a coin and map before the treasure, or are they optional pickups?
 # 2. Decide whether to keep uniform movement costs or add terrain penalties. If terrain costs vary, UCS/A* comparison becomes more informative.
