@@ -224,10 +224,14 @@ grid_choice = st.selectbox('Choose a map below:', ['Map1', 'Map2', 'Map3'])
 
 st.pyplot(plt.gcf())
 
+st.subheader('Search Algorithm Results')
 st.text(f'{"Algorithm":<12}{"Steps":>8}{"Expanded":>12}{"Time (ms)":>14}')
 for name,stats in baseline.items():
     st.text(f'{name:<12}{len(stats["path"])-1:>8}{stats["expanded"]:>12}{stats["seconds"]*1000:>14.3f}')
 
+st.divider()
+st.write('Thanks for Playing!')
+st.caption('This app was created and Developed by Valerie Stapleton, Hanbin Lee, and Famela Dauz for testing search metrics.')
 
 # ## Suggested next steps for team discussion
 # 1. Confirm the intended game rule: must the pirate collect a coin and map before the treasure, or are they optional pickups?
