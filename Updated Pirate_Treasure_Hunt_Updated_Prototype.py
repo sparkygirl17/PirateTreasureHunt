@@ -30,6 +30,8 @@ from itertools import count
 from time import perf_counter
 import matplotlib.pyplot as plt
 
+plt.show = lambda *args, **kwargs: st.write(*args)
+
 GRID = [
     "S..C#.....",
     ".#..#.....",
