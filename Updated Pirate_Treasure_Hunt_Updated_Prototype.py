@@ -13,6 +13,17 @@
 
 import streamlit as st
 
+st.header("Pirate Treasure Hunt Dashboard")
+st.subheader("Test out different search algorithms to see for yourself which is the best.")
+st.write("Each search algorithm has different strengths and weaknesses. Watch how the pirate naviagtes the terrain to compare and contrast and see for yourself!")
+user_name = st.text_input("Enter Player Name:")
+if user_name:
+    st.success(f'Welcome to Pirate Treasure Hunt, {user_name}! Let\'s Explore Search Algorithms.')
+
+grid_choice = st.selectbox('Choose a map below:', ['Basic Map', 'U-shaped Obstacle', 'Complex Maze']) 
+
+st.pyplot(plt.gcf())
+
 from collections import deque
 from heapq import heappush, heappop
 from itertools import count
@@ -881,18 +892,7 @@ print("CSV file exported successfully.")
 
 # In[ ]:
 
-import streamlit as st
 
-st.header("Pirate Treasure Hunt Dashboard")
-st.subheader("Test out different search algorithms to see for yourself which is the best.")
-st.write("Each search algorithm has different strengths and weaknesses. Watch how the pirate naviagtes the terrain to compare and contrast and see for yourself!")
-user_name = st.text_input("Enter Player Name:")
-if user_name:
-    st.success(f'Welcome to Pirate Treasure Hunt, {user_name}! Let\'s Explore Search Algorithms.')
-
-grid_choice = st.selectbox('Choose a map below:', ['Map1', 'Map2', 'Map3']) 
-
-st.pyplot(plt.gcf())
 
 st.subheader('Search Algorithm Results')
 st.text(f'{"Algorithm":<12}{"Steps":>8}{"Expanded":>12}{"Time (ms)":>14}')
