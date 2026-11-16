@@ -212,3 +212,26 @@ print('Sanity checks passed.')
 # 5. Integrate with course-provided AIMA functions if the team prefers that structure, with appropriate attribution.
 # 
 # **Current status:** First runnable notebook with search, switching, visualization, and basic validation. Open for team review and edits.
+
+
+import streamlit as st
+
+st.header("Pirate Treasure Hunt Dashboard")
+st.subheader("Test out different search algorithms to see for yourself which is the best.")
+st.write("Each search algorithm has different strengths and weaknesses. Watch how the pirate naviagtes the terrain to compare and contrast and see for yourself!")
+user_name = st.text_input("Enter Player Name:")
+if user_name:
+    st.success(f'Welcome to Pirate Treasure Hunt, {user_name}! Let\'s Explore Search Algorithms.')
+
+grid_choice = st.selectbox('Choose a map below:', ['Map1', 'Map2', 'Map3']) 
+
+st.pyplot(plt.gcf())
+
+st.subheader('Search Algorithm Results')
+st.text(f'{"Algorithm":<12}{"Steps":>8}{"Expanded":>12}{"Time (ms)":>14}')
+for name,stats in baseline.items():
+    st.text(f'{name:<12}{len(stats["path"])-1:>8}{stats["expanded"]:>12}{stats["seconds"]*1000:>14.3f}')
+
+st.divider()
+st.write('Thanks for Playing!')
+st.caption('This app was created and Developed by Valerie Stapleton, Hanbin Lee, and Famela Dauz for testing search metrics.')
