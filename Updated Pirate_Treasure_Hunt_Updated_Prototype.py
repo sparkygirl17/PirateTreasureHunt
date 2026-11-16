@@ -22,7 +22,7 @@ if user_name:
 
 grid_choice = st.selectbox('Choose a map below:', ['Basic Map', 'U-shaped Obstacle', 'Complex Maze']) 
 
-st.pyplot(plt.gcf())
+
 
 from collections import deque
 from heapq import heappush, heappop
@@ -893,6 +893,7 @@ print("CSV file exported successfully.")
 # In[ ]:
 
 
+st.pyplot(plt.gcf())
 
 st.subheader('Search Algorithm Results')
 st.text(f'{"Algorithm":<12}{"Steps":>8}{"Expanded":>12}{"Time (ms)":>14}')
