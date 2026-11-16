@@ -12,6 +12,7 @@
 # In[1]:
 
 import streamlit as st
+import matplotlib.pyplot as plt
 
 st.header("Pirate Treasure Hunt Dashboard")
 st.subheader("Test out different search algorithms to see for yourself which is the best.")
@@ -44,7 +45,7 @@ from collections import deque
 from heapq import heappush, heappop
 from itertools import count
 from time import perf_counter
-import matplotlib.pyplot as plt
+
 
 plt.show = lambda *args, **kwargs: st.write(*args)
 
