@@ -23,22 +23,17 @@ if user_name:
 
 grid_choice = st.selectbox('Choose a map below:', ['Basic Map', 'U-shaped Obstacle', 'Complex Maze']) 
 
+plt.show = lambda: (st.pyplot(plt.gcf()), plt.clf())
+
 if grid_choice == 'Basic Map':
-    st.pyplot(plt.gcf())
-    plt.clf()
+    plt.show()
 
 elif grid_choice == 'U-shaped Obstacle':
-    st.pyplot(plt.gcf())
-    plt.clf()
+    plt.show()
 
 elif grid_choice == 'Complex Maze':
-    st.pyplot(plt.gcf())
-    plt.clf()
+    plt.show()
 
-fig, ax = plt.subplots()
-ax.scatter(selected_graph['x'], selected_graph['y'])
-st.pyplot(fig)
-plt.close(fig)
 
 
 from collections import deque
@@ -47,7 +42,7 @@ from itertools import count
 from time import perf_counter
 
 
-plt.show = lambda *args, **kwargs: st.write(*args)
+
 
 GRID = [
     "S..C#.....",
