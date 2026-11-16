@@ -847,7 +847,7 @@ benchmark_df = benchmark_df.sort_values(
     ["Map", "Algorithm"]
 ).reset_index(drop=True)
 
-display(benchmark_df)
+st.dataframe(benchmark_df)
 
 benchmark_df.to_csv(
     "Pirate_Treasure_Hunt_Benchmark_Results.csv",
