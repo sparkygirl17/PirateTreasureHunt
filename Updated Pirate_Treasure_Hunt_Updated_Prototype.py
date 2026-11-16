@@ -21,7 +21,7 @@ if user_name:
     st.success(f'Welcome to Pirate Treasure Hunt, {user_name}! Let\'s Explore Search Algorithms.')
 
 grid_choice = st.selectbox('Choose a map below:', ['Basic Map', 'U-shaped Obstacle', 'Complex Maze']) 
-selected_graph = df[df['Map'] == grid_choice
+selected_graph = df[df['Map'] == grid_choice]
 
 fig, as = plt.subplots()
 ax.scatter(selected_graph['x'], selected_graph['y'])
