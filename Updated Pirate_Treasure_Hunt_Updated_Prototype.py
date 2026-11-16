@@ -23,7 +23,7 @@ if user_name:
 grid_choice = st.selectbox('Choose a map below:', ['Basic Map', 'U-shaped Obstacle', 'Complex Maze']) 
 selected_graph = df[df['Map'] == grid_choice]
 
-fig, as = plt.subplots()
+fig, ax = plt.subplots()
 ax.scatter(selected_graph['x'], selected_graph['y'])
 st.pyplot(fig)
 plt.close(fig)
