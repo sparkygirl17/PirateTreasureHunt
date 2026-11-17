@@ -202,7 +202,7 @@ def draw_game(game_result):
     ax.set_xlim(-.5,WIDTH-.5);ax.set_ylim(HEIGHT-.5,-.5)
     ax.set_xticks(range(WIDTH));ax.set_yticks(range(HEIGHT));ax.set_aspect('equal')
     ax.set_title(f'Pirate Treasure Hunt | {game_result["steps"]} steps | {game_result["final_mode"]} at finish')
-    plt.show()
+    #plt.show()
 
 draw_game(result)
 
@@ -837,7 +837,7 @@ plt.savefig(
     dpi=200, bbox_inches="tight"
 )
 
-plt.show()
+#plt.show()
 
 
 # In[11]:
