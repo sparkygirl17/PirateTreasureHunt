@@ -474,7 +474,7 @@ selected_maps = {
     grid_choice: BENCHMARK_MAPS[grid_choice]
 }
 
-fig, axes = plt.subplots(3, 4, figsize=(18, 14))
+fig, axes = plt.subplots(1, 4, figsize=(18, 4.5), squeeze=False)
 
 search_cmap = ListedColormap([
     "#F4EFDC",  # Unexplored
