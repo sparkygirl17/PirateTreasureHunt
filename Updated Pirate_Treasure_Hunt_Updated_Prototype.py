@@ -23,6 +23,8 @@ if user_name:
 
 grid_choice = st.selectbox('Choose a map below:', ['Basic Map', 'U-shaped Obstacle', 'Complex Maze']) 
 
+algorithm_choice = st.selectbox('Choose a search algorithm:', ['BFS', 'UCS', 'Greedy', 'A*'])
+
 plt.show = lambda: (st.pyplot(plt.gcf()), plt.clf())
 
 
@@ -469,11 +471,9 @@ print("\nTotal benchmark cases:", len(benchmark_results))
 from matplotlib.patches import Patch
 from matplotlib.lines import Line2D
 
-selected_maps = {
-    grid_choice: BENCHMARK_MAPS[grid_choice]
-}
+selected_maps = {grid_choice: BENCHMARK_MAPS[grid_choice]}
 
-fig, axes = plt.subplots(1, 4, figsize=(18, 4.5), squeeze=False)
+fig, axes = plt.subplots(1, 1, figsize=(6, 6), squeeze=False)
 
 search_cmap = ListedColormap([
     "#F4EFDC",  # Unexplored
@@ -483,9 +483,12 @@ search_cmap = ListedColormap([
     "#FFC107"   # Treasure
 ])
 
+config = BENCHMARK_MAPS[grid_choice]
+stats = benchmark_results[(grid_choice, algorithm_choice)]
+
 for i, (map_name, config) in enumerate(selected_maps.items()):
 
-    for j, algorithm in enumerate(ALGORITHMS):
+    for j, algorithm in enumerate(algorithm_choice):
 
         ax = axes[i, j]
         stats = benchmark_results[(map_name, algorithm)]
