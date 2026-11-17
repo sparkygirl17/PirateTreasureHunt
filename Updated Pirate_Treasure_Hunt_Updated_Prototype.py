@@ -914,9 +914,7 @@ print("CSV file exported successfully.")
 
 
 st.subheader('Search Algorithm Results')
-st.text(f'{"Algorithm":<12}{"Steps":>8}{"Expanded":>12}{"Time (ms)":>14}')
-for name,stats in baseline.items():
-    st.text(f'{name:<12}{len(stats["path"])-1:>8}{stats["expanded"]:>12}{stats["seconds"]*1000:>14.3f}')
+
 
 st.divider()
 st.write('Thanks for Playing!')
