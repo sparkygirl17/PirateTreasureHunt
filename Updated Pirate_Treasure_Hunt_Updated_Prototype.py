@@ -21,7 +21,7 @@ user_name = st.text_input("Enter Player Name:")
 if user_name:
     st.success(f'Welcome to Pirate Treasure Hunt, {user_name}! Let\'s Explore Search Algorithms.')
 
-grid_choice = st.selectbox('Choose a map below:', ['Basic Map', 'U-shaped Obstacle', 'Complex Maze']) 
+grid_choice = st.selectbox('Select your map below:', ['Basic Map', 'U-shaped Obstacle', 'Complex Maze']) 
 
 algorithm_choice = st.selectbox('Choose a search algorithm:', ['BFS', 'UCS', 'Greedy', 'A*'])
 
