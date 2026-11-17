@@ -25,14 +25,6 @@ grid_choice = st.selectbox('Choose a map below:', ['Basic Map', 'U-shaped Obstac
 
 plt.show = lambda: (st.pyplot(plt.gcf()), plt.clf())
 
-if grid_choice == 'Basic Map':
-    plt.show()
-
-elif grid_choice == 'U-shaped Obstacle':
-    plt.show()
-
-elif grid_choice == 'Complex Maze':
-    plt.show()
 
 
 
@@ -279,13 +271,18 @@ BENCHMARK_MAPS = {
 import numpy as np
 from matplotlib.colors import ListedColormap
 
+selected_maps = {
+    grid_choice: BENCHMARK_MAPS[grid_choice]
+}
+
 fig, axes = plt.subplots(1, 3, figsize=(15, 5))
+axes = axes[0]
 
 cmap = ListedColormap([
     "#F4EFDC", "#334155", "#4CAF50", "#FFC107"
 ])
 
-for ax, (name, config) in zip(axes, BENCHMARK_MAPS.items()):
+for ax, (name, config) in zip(axes, selected_maps.items()):
     grid = np.zeros((10, 10))
 
     for r, c in config["walls"]:
@@ -473,6 +470,10 @@ print("\nTotal benchmark cases:", len(benchmark_results))
 from matplotlib.patches import Patch
 from matplotlib.lines import Line2D
 
+selected_maps = {
+    grid_choice: BENCHMARK_MAPS[grid_choice]
+}
+
 fig, axes = plt.subplots(3, 4, figsize=(18, 14))
 
 search_cmap = ListedColormap([
@@ -483,7 +484,7 @@ search_cmap = ListedColormap([
     "#FFC107"   # Treasure
 ])
 
-for i, (map_name, config) in enumerate(BENCHMARK_MAPS.items()):
+for i, (map_name, config) in enumerate(selected_maps.items()):
 
     for j, algorithm in enumerate(ALGORITHMS):
 
