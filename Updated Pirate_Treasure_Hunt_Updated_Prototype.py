@@ -276,7 +276,6 @@ selected_maps = {
 }
 
 fig, axes = plt.subplots(1, 1, figsize=(5, 5))
-axes = axes[0]
 
 cmap = ListedColormap([
     "#F4EFDC", "#334155", "#4CAF50", "#FFC107"
