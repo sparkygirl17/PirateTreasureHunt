@@ -913,8 +913,6 @@ print("CSV file exported successfully.")
 
 
 
-st.subheader('Search Algorithm Results')
-
 
 st.divider()
 st.write('Thanks for Playing!')
