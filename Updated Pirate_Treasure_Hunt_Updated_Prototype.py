@@ -912,7 +912,6 @@ print("CSV file exported successfully.")
 # In[ ]:
 
 
-st.pyplot(plt.gcf())
 
 st.subheader('Search Algorithm Results')
 st.text(f'{"Algorithm":<12}{"Steps":>8}{"Expanded":>12}{"Time (ms)":>14}')
