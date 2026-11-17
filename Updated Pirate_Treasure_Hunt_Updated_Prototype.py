@@ -488,7 +488,7 @@ stats = benchmark_results[(grid_choice, algorithm_choice)]
 
 for i, (map_name, config) in enumerate(selected_maps.items()):
 
-    for j, algorithm in enumerate(algorithm_choice):
+    for j, algorithm in enumerate([algorithm_choice]):
 
         ax = axes[i, j]
         stats = benchmark_results[(map_name, algorithm)]
@@ -560,10 +560,12 @@ fig.legend(handles=legend_elements,
 
 plt.tight_layout(rect=[0, 0.05, 1, 0.95])
 
-plt.savefig("Pirate_Treasure_Hunt_Search_Comparison.png",
+#plt.savefig("Pirate_Treasure_Hunt_Search_Comparison.png",
             dpi=200, bbox_inches="tight")
 
-plt.show()
+#plt.show()
+st.pyplot(fig)
+plt.close(fig)
 
 
 # In[9]:
