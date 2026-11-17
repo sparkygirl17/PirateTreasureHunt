@@ -561,7 +561,7 @@ fig.legend(handles=legend_elements,
 plt.tight_layout(rect=[0, 0.05, 1, 0.95])
 
 #plt.savefig("Pirate_Treasure_Hunt_Search_Comparison.png",
-            dpi=200, bbox_inches="tight")
+            #dpi=200, bbox_inches="tight")
 
 #plt.show()
 st.pyplot(fig)
