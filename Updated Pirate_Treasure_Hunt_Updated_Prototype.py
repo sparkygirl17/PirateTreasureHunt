@@ -275,14 +275,14 @@ selected_maps = {
     grid_choice: BENCHMARK_MAPS[grid_choice]
 }
 
-fig, axes = plt.subplots(1, 3, figsize=(15, 5))
+fig, axes = plt.subplots(1, 1, figsize=(5, 5))
 axes = axes[0]
 
 cmap = ListedColormap([
     "#F4EFDC", "#334155", "#4CAF50", "#FFC107"
 ])
 
-for ax, (name, config) in zip(axes, selected_maps.items()):
+for ax, (name, config) in zip([axes], selected_maps.items()):
     grid = np.zeros((10, 10))
 
     for r, c in config["walls"]:
