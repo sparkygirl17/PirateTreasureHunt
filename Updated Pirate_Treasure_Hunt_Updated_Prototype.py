@@ -838,7 +838,7 @@ plt.savefig(
 )
 
 #plt.show()
-
+plt.close('all')
 
 # In[11]:
 
