@@ -725,7 +725,7 @@ plt.close(fig)
     
 # 9. Visualization of Adaptive Search Strategy
 
-fig, axes = plt.subplots(1, 3, figsize=(16, 6))
+fig, axes = plt.subplots(1, 1, figsize=(6, 6), squeeze=False)
 
 algorithm_colors = {
     "BFS": "#2563EB",
@@ -740,7 +740,7 @@ adaptive_cmap = ListedColormap([
 ])
 
 for ax, (map_name, config) in zip(
-        axes, BENCHMARK_MAPS.items()):
+        axes[0], [(grid_choice, BENCHMARK_MAPS[grid_choice])]):
 
     stats = adaptive_results[map_name]
     items = ITEM_LOCATIONS[map_name]
