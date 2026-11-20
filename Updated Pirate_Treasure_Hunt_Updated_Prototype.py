@@ -311,7 +311,7 @@ for ax, (name, config) in zip([axes], selected_maps.items()):
 plt.suptitle("Pirate Treasure Hunt - Benchmark Maps",
              fontsize=16)
 plt.tight_layout()
-plt.show()
+#plt.show()
 
 print("Total benchmark maps:", len(BENCHMARK_MAPS))
 
