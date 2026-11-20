@@ -705,9 +705,9 @@ fig.suptitle(
 )
 
 fig.legend(handles=legend_elements,
-           loc="lower center", ncol=6, fontsize=11)
+           loc="lower center", ncol=3, fontsize=11)
 
-plt.tight_layout(rect=[0, 0.05, 1, 0.95])
+plt.tight_layout(rect=[0, 0.12, 1, 0.92])
 
 #plt.savefig("Pirate_Treasure_Hunt_Search_Comparison.png",
             #dpi=200, bbox_inches="tight")
@@ -834,9 +834,9 @@ fig.suptitle(
 )
 
 fig.legend(handles=legend_elements,
-           loc="lower center", ncol=5)
+           loc="lower center", ncol=3, fontsize=10)
 
-plt.tight_layout(rect=[0, 0.07, 1, 0.93])
+plt.tight_layout(rect=[0, 0.12, 1, 0.92])
 
 plt.savefig(
     "Pirate_Treasure_Hunt_Adaptive_Search.png",
