@@ -607,10 +607,12 @@ for map_name, config in BENCHMARK_MAPS.items():
 
 print("\nTotal benchmark cases:", len(benchmark_results))
 
+    
 
 # In[8]: In[9] moved to be placed above this section
 
 
+    
 # 7. Visualization of Explored Nodes and Final Paths
 
 from matplotlib.patches import Patch
@@ -708,8 +710,9 @@ plt.tight_layout(rect=[0, 0.05, 1, 0.95])
 #plt.savefig("Pirate_Treasure_Hunt_Search_Comparison.png",
             #dpi=200, bbox_inches="tight")
 
+if algorithm_choice != 'Adaptive':
 #plt.show()
-st.pyplot(fig)
+    st.pyplot(fig)
 plt.close(fig)
 
 
@@ -717,7 +720,7 @@ plt.close(fig)
 
 # In[10]:
 
-
+    
 # 9. Visualization of Adaptive Search Strategy
 
 fig, axes = plt.subplots(1, 3, figsize=(16, 6))
@@ -838,7 +841,9 @@ plt.savefig(
     dpi=200, bbox_inches="tight"
 )
 
-#plt.show()
+if algorithm_choice == 'Adaptive':
+    #plt.show()
+    st.pyplot(fig)
 plt.close('all')
 
 # In[11]:
