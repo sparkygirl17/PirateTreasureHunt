@@ -312,6 +312,8 @@ plt.suptitle("Pirate Treasure Hunt - Benchmark Maps",
              fontsize=16)
 plt.tight_layout()
 #plt.show()
+st.pyplot(fig)
+plt.close(fig)
 
 print("Total benchmark maps:", len(BENCHMARK_MAPS))
 
