@@ -462,113 +462,7 @@ for map_name, config in BENCHMARK_MAPS.items():
 
 print("\nTotal benchmark cases:", len(benchmark_results))
 
-
-# In[8]:
-
-
-# 7. Visualization of Explored Nodes and Final Paths
-
-from matplotlib.patches import Patch
-from matplotlib.lines import Line2D
-
-selected_maps = {grid_choice: BENCHMARK_MAPS[grid_choice]}
-
-fig, axes = plt.subplots(1, 1, figsize=(6, 6), squeeze=False)
-
-search_cmap = ListedColormap([
-    "#F4EFDC",  # Unexplored
-    "#334155",  # Wall
-    "#ADD8E6",  # Explored
-    "#4CAF50",  # Start
-    "#FFC107"   # Treasure
-])
-
-config = BENCHMARK_MAPS[grid_choice]
-stats = benchmark_results[(grid_choice, algorithm_choice)]
-
-for i, (map_name, config) in enumerate(selected_maps.items()):
-
-    for j, algorithm in enumerate([algorithm_choice]):
-
-        ax = axes[i, j]
-        stats = benchmark_results[(map_name, algorithm)]
-
-        grid = np.zeros((10, 10))
-
-        for r, c in config["walls"]:
-            grid[r, c] = 1
-
-        for r, c in stats["expanded_nodes"]:
-            grid[r, c] = 2
-
-        sr, sc = config["start"]
-        gr, gc = config["goal"]
-
-        grid[sr, sc] = 3
-        grid[gr, gc] = 4
-
-        ax.imshow(grid, cmap=search_cmap, vmin=0, vmax=4)
-
-        if stats["path"]:
-            rows, cols = zip(*stats["path"])
-
-            ax.plot(cols, rows,
-                    color="#E65100",
-                    linewidth=2.5,
-                    marker="o",
-                    markersize=3)
-
-        ax.text(sc, sr, "S", ha="center", va="center",
-                fontsize=12, fontweight="bold")
-
-        ax.text(gc, gr, "T", ha="center", va="center",
-                fontsize=12, fontweight="bold")
-
-        ax.set_title(
-            f"{map_name} - {algorithm}\n"
-            f"Steps: {stats['steps']} | "
-            f"Expanded: {stats['expanded']}",
-            fontsize=11
-        )
-
-        ax.set_xticks(range(10))
-        ax.set_yticks(range(10))
-
-        ax.set_xticks(np.arange(-0.5, 10, 1), minor=True)
-        ax.set_yticks(np.arange(-0.5, 10, 1), minor=True)
-
-        ax.grid(which="minor", color="white", linewidth=0.8)
-        ax.tick_params(which="minor", length=0)
-
-legend_elements = [
-    Patch(facecolor="#F4EFDC", label="Unexplored"),
-    Patch(facecolor="#334155", label="Wall"),
-    Patch(facecolor="#ADD8E6", label="Explored Nodes"),
-    Patch(facecolor="#4CAF50", label="Start"),
-    Patch(facecolor="#FFC107", label="Treasure"),
-    Line2D([0], [0], color="#E65100",
-           linewidth=2.5, label="Final Path")
-]
-
-fig.suptitle(
-    "Pirate Treasure Hunt - Search Algorithm Comparison",
-    fontsize=18
-)
-
-fig.legend(handles=legend_elements,
-           loc="lower center", ncol=6, fontsize=11)
-
-plt.tight_layout(rect=[0, 0.05, 1, 0.95])
-
-#plt.savefig("Pirate_Treasure_Hunt_Search_Comparison.png",
-            #dpi=200, bbox_inches="tight")
-
-#plt.show()
-st.pyplot(fig)
-plt.close(fig)
-
-
-# In[9]:
+# In[9]: *Switched to be put before In[8]
 
 
 # 8. Adaptive Search Strategy
@@ -712,6 +606,113 @@ for map_name, config in BENCHMARK_MAPS.items():
         )
 
 print("\nTotal benchmark cases:", len(benchmark_results))
+
+
+# In[8]: In[9] moved to be placed above this section
+
+
+# 7. Visualization of Explored Nodes and Final Paths
+
+from matplotlib.patches import Patch
+from matplotlib.lines import Line2D
+
+selected_maps = {grid_choice: BENCHMARK_MAPS[grid_choice]}
+
+fig, axes = plt.subplots(1, 1, figsize=(6, 6), squeeze=False)
+
+search_cmap = ListedColormap([
+    "#F4EFDC",  # Unexplored
+    "#334155",  # Wall
+    "#ADD8E6",  # Explored
+    "#4CAF50",  # Start
+    "#FFC107"   # Treasure
+])
+
+config = BENCHMARK_MAPS[grid_choice]
+stats = benchmark_results[(grid_choice, algorithm_choice)]
+
+for i, (map_name, config) in enumerate(selected_maps.items()):
+
+    for j, algorithm in enumerate([algorithm_choice]):
+
+        ax = axes[i, j]
+        stats = benchmark_results[(map_name, algorithm)]
+
+        grid = np.zeros((10, 10))
+
+        for r, c in config["walls"]:
+            grid[r, c] = 1
+
+        for r, c in stats["expanded_nodes"]:
+            grid[r, c] = 2
+
+        sr, sc = config["start"]
+        gr, gc = config["goal"]
+
+        grid[sr, sc] = 3
+        grid[gr, gc] = 4
+
+        ax.imshow(grid, cmap=search_cmap, vmin=0, vmax=4)
+
+        if stats["path"]:
+            rows, cols = zip(*stats["path"])
+
+            ax.plot(cols, rows,
+                    color="#E65100",
+                    linewidth=2.5,
+                    marker="o",
+                    markersize=3)
+
+        ax.text(sc, sr, "S", ha="center", va="center",
+                fontsize=12, fontweight="bold")
+
+        ax.text(gc, gr, "T", ha="center", va="center",
+                fontsize=12, fontweight="bold")
+
+        ax.set_title(
+            f"{map_name} - {algorithm}\n"
+            f"Steps: {stats['steps']} | "
+            f"Expanded: {stats['expanded']}",
+            fontsize=11
+        )
+
+        ax.set_xticks(range(10))
+        ax.set_yticks(range(10))
+
+        ax.set_xticks(np.arange(-0.5, 10, 1), minor=True)
+        ax.set_yticks(np.arange(-0.5, 10, 1), minor=True)
+
+        ax.grid(which="minor", color="white", linewidth=0.8)
+        ax.tick_params(which="minor", length=0)
+
+legend_elements = [
+    Patch(facecolor="#F4EFDC", label="Unexplored"),
+    Patch(facecolor="#334155", label="Wall"),
+    Patch(facecolor="#ADD8E6", label="Explored Nodes"),
+    Patch(facecolor="#4CAF50", label="Start"),
+    Patch(facecolor="#FFC107", label="Treasure"),
+    Line2D([0], [0], color="#E65100",
+           linewidth=2.5, label="Final Path")
+]
+
+fig.suptitle(
+    "Pirate Treasure Hunt - Search Algorithm Comparison",
+    fontsize=18
+)
+
+fig.legend(handles=legend_elements,
+           loc="lower center", ncol=6, fontsize=11)
+
+plt.tight_layout(rect=[0, 0.05, 1, 0.95])
+
+#plt.savefig("Pirate_Treasure_Hunt_Search_Comparison.png",
+            #dpi=200, bbox_inches="tight")
+
+#plt.show()
+st.pyplot(fig)
+plt.close(fig)
+
+
 
 
 # In[10]:
