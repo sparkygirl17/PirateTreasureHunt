@@ -23,7 +23,7 @@ if user_name:
 
 grid_choice = st.selectbox('Select your map below:', ['Basic Map', 'U-shaped Obstacle', 'Complex Maze']) 
 
-algorithm_choice = st.selectbox('Choose a search algorithm:', ['BFS', 'UCS', 'Greedy', 'A*'])
+algorithm_choice = st.selectbox('Choose a search algorithm:', ['Adaptive Search', 'BFS', 'UCS', 'Greedy', 'A*'])
 
 plt.show = lambda: (st.pyplot(plt.gcf()), plt.clf())
 
