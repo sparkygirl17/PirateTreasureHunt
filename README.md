@@ -28,7 +28,7 @@ This code was written by Hanbin Lee and edited for Streamlit integration by Vale
 
 ## Cite this Program
 
-Stapleton, V., Lee, H., & Dauz, F. (2026). Pirate Treasure Hunt Final (Version 2.0.0) [Source code]. GitHub. [github.com](https://github.com/sparkygirl17/PirateTreasureHunt)
+Stapleton, V., Lee, H. and Dauz, F. (2026) Piratetreasurehunt: AI search algorithm game for AI 801 at Penn State University, GitHub. Available at: https://github.com/sparkygirl17/PirateTreasureHunt (Accessed: 22 November 2026). 
 
 ## Sources 
 
