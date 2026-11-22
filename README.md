@@ -26,6 +26,10 @@ The end of the dashboard include the chart for which all metrics are displayed. 
 
 This code was written by Hanbin Lee and edited for Streamlit integration by Valerie Stapleton in conjunction with Famela Dauz for the Pennsylvania State University Foundations of Artificial Intelligence course in the Fall of 2026. 
 
+## Cite this Program
+
+Stapleton, V., Lee, H., & Dauz, F. (2026). Pirate Treasure Hunt Final (Version 2.0.0) [Source code]. GitHub. github.com
+
 ## Sources 
 
 Russell, S., & Norvig, P. (2021). Artificial intelligence: A modern approach (4th ed.). Pearson. https://aima.cs.berkeley.edu/ 
