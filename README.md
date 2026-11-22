@@ -5,4 +5,4 @@ The AI agent, or pirate, is tasked with finding the treasure on the map and will
 
 ## Active File Backing Streamlit
 
-The main file to access the code that is running streamlit is titled 
+The main file to access the code that is running streamlit is titled Pirate_Treasure_Hunt_Final.py. This path is linked with a Streamlit Dashboard. We have the original Jupyter Notebook file titled as 
