@@ -5,4 +5,18 @@ The AI agent, or pirate, is tasked with finding the treasure on the map and will
 
 ## Active File Backing Streamlit
 
-The main file to access the code that is running streamlit is titled Pirate_Treasure_Hunt_Final.py. This path is linked with a Streamlit Dashboard. We have the original Jupyter Notebook file titled as 
+The main file to access the code that is running streamlit is titled Pirate_Treasure_Hunt_Final.py. This path is linked with a Streamlit Dashboard. We have the original Jupyter Notebook file titled as Pirate_Treasure_Hunt_Updated_Prototype (1).ipynb. This has the original code unedited with Streamlit integrations. 
+
+## Running the Dashboard
+
+The Pirate Treasure Hunt can be run by accessing the link provided below. 
+
+Pirate Treasure Hunt Dashboard: 
+
+The user can input their name for a welcome message and then select the desired dropdown options. The user can choose from three different maps and four different search methods. BFS, UCS, Greedy, A* and Adaptive Search. 
+
+Adaptive Search is defined as the search strategy that dynamically switches between algorithms when specific items are found. The agent begins with the standard Breadth-First-Search strategy and will change methods when it is met with a coin and a map. Eventually completion is found when the agent reaches the treasure. Each map include a starting node and location for the treasure. 
+
+The dropdown allows the user to select benchmark cases of each algorithm on its own with each map. This allows the user to have access to benchmark metrics and visual node exploration to enhance understanding. 
+
+The end of the dashboard include the chart for which all metrics are displayed. The user can explore the visual display of each map and search combination while having access to the metrics for all combinations at all times. These metrics offer steps, path cost, expanded nodes, unique expanded nodes, planning time, planning calls, algorithm switches, and if the search succeeded. 
