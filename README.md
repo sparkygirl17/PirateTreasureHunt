@@ -25,3 +25,7 @@ The end of the dashboard include the chart for which all metrics are displayed. 
 ## Authors
 
 This code was written by Hanbin Lee and edited for Streamlit integration by Valerie Stapleton in conjunction with Famela Dauz for the Pennsylvania State University Foundations of Artificial Intelligence course in the Fall of 2026. 
+
+## Sources 
+
+Russell, S., & Norvig, P. (2021). Artificial intelligence: A modern approach (4th ed.). Pearson. https://aima.cs.berkeley.edu/ 
